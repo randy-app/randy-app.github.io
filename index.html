@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Crowns Scorekeeper</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0d1a0f;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .crown {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #f2c832;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: rgba(255,255,255,0.65);
+      max-width: 400px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .app-store-btn {
+      display: inline-block;
+      background: #f2c832;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+
+    .app-store-btn:hover { opacity: 0.85; }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      max-width: 520px;
+      margin: 40px 0;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: #f2c832; }
+  </style>
+</head>
+<body>
+
+  <div class="crown">&#9819;</div>
+
+  <h1>5 Crowns Scorekeeper</h1>
+
+  <p class="tagline">
+    The simplest way to track scores for your 5 Crowns card game —
+    dealer rotation, round history, and a built-in score calculator.
+  </p>
+
+  <a class="app-store-btn"
+     href="https://apps.apple.com/us/app/scorekeeper-5-crowns/id6761738571"
+     target="_blank">
+    Download on the App Store
+  </a>
+
+  <div class="features">
+    <div class="feature">&#9733; Dealer tracking &amp; auto-rotation</div>
+    <div class="feature">&#9733; Built-in score calculator</div>
+    <div class="feature">&#9733; Full stats &amp; game history</div>
+    <div class="feature">&#9733; Edit any past round score</div>
+    <div class="feature">&#9733; Play again with same players</div>
+    <div class="feature">&#9733; Winner celebration &amp; confetti</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Randy Cox &nbsp;&middot;&nbsp;
+      <a href="https://randy-app.github.io/app-privacy-policy/">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
