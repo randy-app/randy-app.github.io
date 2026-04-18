@@ -11,34 +11,33 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #0d1a0f;
       color: #fff;
-      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── Hero ── */
+    .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 40px 24px;
+      padding: 80px 24px 60px;
     }
 
-    .crown {
-      font-size: 80px;
-      margin-bottom: 20px;
-    }
+    .crown { font-size: 80px; margin-bottom: 16px; }
 
-    h1 {
-      font-size: 36px;
+    .hero h1 {
+      font-size: 38px;
       font-weight: 800;
       color: #f2c832;
       letter-spacing: -0.5px;
       margin-bottom: 12px;
     }
 
-    .tagline {
+    .hero p {
       font-size: 18px;
-      color: rgba(255,255,255,0.65);
-      max-width: 400px;
-      line-height: 1.5;
-      margin-bottom: 40px;
+      color: rgba(255,255,255,0.6);
+      max-width: 420px;
+      margin-bottom: 36px;
     }
 
     .app-store-btn {
@@ -47,78 +46,240 @@
       color: #000;
       font-size: 16px;
       font-weight: 700;
-      padding: 16px 36px;
+      padding: 16px 40px;
       border-radius: 50px;
       text-decoration: none;
-      margin-bottom: 20px;
       transition: opacity 0.2s;
     }
-
     .app-store-btn:hover { opacity: 0.85; }
 
+    /* ── Sections ── */
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f2c832;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* ── Features ── */
     .features {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 12px;
-      justify-content: center;
-      max-width: 520px;
-      margin: 40px 0;
     }
 
     .feature {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 10px 18px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.78);
     }
 
-    footer {
-      margin-top: 48px;
+    .feature span { margin-right: 8px; }
+
+    /* ── Pricing ── */
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .plans { grid-template-columns: 1fr; }
+    }
+
+    .plan {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .plan.featured {
+      border-color: #f2c832;
+      border-width: 2px;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f2c832;
+      color: #000;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 8px;
+    }
+
+    .plan-price {
+      font-size: 36px;
+      font-weight: 900;
+      color: #f2c832;
+      letter-spacing: -1px;
+    }
+
+    .plan-period {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 4px;
+    }
+
+    .plan-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      margin-top: 8px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0 24px;
+    }
+
+    /* ── Support ── */
+    .support-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+
+    .support-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: rgba(242,200,50,0.12);
+      border: 1px solid rgba(242,200,50,0.35);
+      color: #f2c832;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .email-btn:hover { background: rgba(242,200,50,0.22); }
+
+    .support-note {
       font-size: 13px;
       color: rgba(255,255,255,0.3);
+      margin-top: 14px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px 48px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
     }
 
     footer a {
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.4);
       text-decoration: none;
     }
-
     footer a:hover { color: #f2c832; }
   </style>
 </head>
 <body>
 
-  <div class="crown">&#9819;</div>
-
-  <h1>5 Crowns Scorekeeper</h1>
-
-  <p class="tagline">
-    The simplest way to track scores for your 5 Crowns card game —
-    dealer rotation, round history, and a built-in score calculator.
-  </p>
-
-  <a class="app-store-btn"
-     href="https://apps.apple.com/us/app/scorekeeper-5-crowns/id6761738571"
-     target="_blank">
-    Download on the App Store
-  </a>
-
-  <div class="features">
-    <div class="feature">&#9733; Dealer tracking &amp; auto-rotation</div>
-    <div class="feature">&#9733; Built-in score calculator</div>
-    <div class="feature">&#9733; Full stats &amp; game history</div>
-    <div class="feature">&#9733; Edit any past round score</div>
-    <div class="feature">&#9733; Play again with same players</div>
-    <div class="feature">&#9733; Winner celebration &amp; confetti</div>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="crown">&#9819;</div>
+    <h1>5 Crowns Scorekeeper</h1>
+    <p>The simplest way to track scores for your 5 Crowns card game — dealer rotation, round history, and a built-in score calculator.</p>
+    <a class="app-store-btn"
+       href="https://apps.apple.com/us/app/scorekeeper-5-crowns/id6761738571"
+       target="_blank">
+      Download on the App Store
+    </a>
   </div>
 
+  <hr class="divider" />
+
+  <!-- Features -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature"><span>&#9733;</span>Dealer tracking &amp; auto-rotation</div>
+      <div class="feature"><span>&#9733;</span>Built-in score calculator</div>
+      <div class="feature"><span>&#9733;</span>Full stats &amp; game history</div>
+      <div class="feature"><span>&#9733;</span>Edit any past round score</div>
+      <div class="feature"><span>&#9733;</span>Play again with same players</div>
+      <div class="feature"><span>&#9733;</span>Winner celebration &amp; confetti</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <h2>Go Ad-Free</h2>
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-name">Monthly</div>
+        <div class="plan-price">$0.99</div>
+        <div class="plan-period">per month</div>
+        <div class="plan-note">Auto-renewing</div>
+      </div>
+      <div class="plan featured">
+        <div class="plan-badge">Save 17%</div>
+        <div class="plan-name">Annual</div>
+        <div class="plan-price">$9.99</div>
+        <div class="plan-period">per year</div>
+        <div class="plan-note">That&rsquo;s $0.83/month</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Support -->
+  <section id="support">
+    <h2>Support</h2>
+    <div class="support-card">
+      <p>Have a question, found a bug, or need help with the app? Send us an email and we&rsquo;ll get back to you as soon as possible.</p>
+      <a class="email-btn" href="mailto:yelp_ducks_8k@icloud.com">
+        yelp_ducks_8k@icloud.com
+      </a>
+      <div class="support-note">Typically replies within 1&ndash;2 business days</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Randy Cox &nbsp;&middot;&nbsp;
+    <p>
+      &copy; 2026 Randy Cox &nbsp;&middot;&nbsp;
       <a href="https://randy-app.github.io/app-privacy-policy/">Privacy Policy</a>
     </p>
-  </footer> 
+  </footer>
 
 </body>
 </html>
